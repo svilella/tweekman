@@ -94,8 +94,8 @@ def nextTweet():
     #global un
     
 
-    if emo_scores['Sarcasm'].get() == 1:
-         emo_scores['Irony'].set(1)
+    if emo_scores['Sarcasmo'].get() == 1:
+         emo_scores['Ironia'].set(1)
 
     # if unvar==1:
     # 	emo_scores['Incomprensibile'].set(1)
@@ -150,7 +150,7 @@ okay.grid(row = 1, column = 2,padx = (0,30))
 
 emotions = ['Gioia', 'Fiducia', 'Amore','Tristezza',
             'Rabbia', 'Disgusto', 'Paura', 'Sorpresa', 'Anticipazione',
-            'Ironia','Sarcasmo','Odio', 'Offensività' ,'Contenitore?', 'Contenuto?']
+            'Ironia','Sarcasmo','Odio', 'Offensività' ,'Contenitore', 'Contenuto']
 
 L = len(emotions)
 
