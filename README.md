@@ -5,12 +5,17 @@ L?interfaccia è scritta in Python 3 e sfrutta `tkinter`, pacchetto GUI standard 
 
 Sono presenti tutti i livelli concordati: **emozioni**, secondo il modello di Ekman + love, **ironia/sarcasmo**, **odio/offensività**,** contenitore/contenuto**. Il tweet compare nell?area grigia nella parte bassa dell?interfaccia. Per ogni tweet è possibile:
 
-*spuntare il checkbox per ogni emozione che si ritiene sia presente;
-*spuntare il checkbox se si ritiene vi sia ironia o sarcasmo. Poiché il sarcasmo è una forma di ironia (vedere punto 3 delle linee guida), qualora venisse annotato il sarcasmo, il tweet sarà annotato anche come ironico: non esiste sarcasmo senza ironia;
-*spuntare il check di odio/offensività e contenitore/contenuto laddove necessario;
-*se si ritiene che il tweet sia illeggibile o indecifrabile per qualsiasi motivo, cliccare su `INCOMPRENSIBILE` nella parte bassa dell?interfaccia.
-*Cliccando su `Next `verrà acquisita l'annotazione per il tweet corrente, e verrà mostrato il tweet successivo (nota: anche dopo aver premuto `INCOMPRENSIBILE` sarà necessario cliccare `Next`).
-*Cliccando su `Save` il file `tweets.csv` sarà sovrascritto, e le annotazioni salvate.
+* spuntare il checkbox per ogni emozione che si ritiene sia presente;
+
+* spuntare il checkbox se si ritiene vi sia ironia o sarcasmo. Poiché il sarcasmo è una forma di ironia (vedere punto 3 delle linee guida), qualora venisse annotato il sarcasmo, il tweet sarà annotato anche come ironico: non esiste sarcasmo senza ironia;
+
+* spuntare il check di odio/offensività e contenitore/contenuto laddove necessario;
+
+* se si ritiene che il tweet sia illeggibile o indecifrabile per qualsiasi motivo, cliccare su `INCOMPRENSIBILE` nella parte bassa dell?interfaccia.
+
+* Cliccando su `Next `verrà acquisita l'annotazione per il tweet corrente, e verrà mostrato il tweet successivo (nota: anche dopo aver premuto `INCOMPRENSIBILE` sarà necessario cliccare `Next`).
+
+* Cliccando su `Save` il file `tweets.csv` sarà sovrascritto, e le annotazioni salvate.
 
 Possono essere spuntati più check per ciascuna annotazione, nessuno è esclusivo, incluso il pulsante `INCOMPRENSIBILE`.
 
