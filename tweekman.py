@@ -106,8 +106,8 @@ def nextTweet():
     x = [emo_scores[e].get() for e in emo_scores]
     
     
-    df.iloc[pointer,3:] = x
-    df.iloc[pointer,1] = 1
+    df.iloc[pointer,4:] = x
+    df.iloc[pointer,3] = 1
     df.to_csv('temp.csv', index = False)
     
     if len(tweets_idx) == 0:
