@@ -67,7 +67,7 @@ def incomprensibile():
 
 
 
-howmany = tk.Label(bf, text = HM, font='Helvetica 14', bg = 'gray85')
+howmany = tk.Label(bf, text = HM, font='Verdana 14', bg = 'gray85')
 howmany.grid(row = 2, column = 1, padx = (0,30))
 
 
@@ -111,7 +111,7 @@ def nextTweet():
     df.to_csv('temp.csv', index = False)
     
     if len(tweets_idx) == 0:
-        save()
+        save_df()
         print('End: no more tweets to annotate.')
         window.destroy()
 
@@ -223,11 +223,11 @@ def formatta_testo(text):
                 print(e)
         
         elif '@' in t:
-            tt.window_create(tk.END, window = tk.Label(tt, font='Helvetica 14', bg = 'gray85', fg= 'darkblue', text = t))
+            tt.window_create(tk.END, window = tk.Label(tt, font='Verdana 14', bg = 'gray85', fg= 'darkblue', text = t))
         elif re.match('^#',t):
-            tt.window_create(tk.END, window = tk.Label(tt, font='Helvetica 14', bg = 'gray85', fg= 'darkblue', text = t))
+            tt.window_create(tk.END, window = tk.Label(tt, font='Verdana 14', bg = 'gray85', fg= 'darkblue', text = t))
         else:
-            tt.window_create(tk.END, window = tk.Label(tt, font='Helvetica 14', bg= 'gray85', text = t))
+            tt.window_create(tk.END, window = tk.Label(tt, font='Verdana 14', bg= 'gray85', text = t))
 
  
 
@@ -271,12 +271,6 @@ def init_window():
         
         tk.Label(mf, bg = color[i], text = t, font='Courier 12 bold').grid(row = r+1, column = j + 0)
             
-            
-#         radios += [[tk.Radiobutton(mf, text = "No", variable = emo_scores[emotions[i]], value = 0).grid(row= r+2, column = j+1, padx = (10,10)),
-#                     tk.Radiobutton(mf, text = "Yes", variable = emo_scores[emotions[i]], value = 1).grid(row= r+2, column = j+2, padx = (10,10)),
-#                     tk.Radiobutton(mf, text = "UN", variable = emo_scores[emotions[i]], value = 2).grid(row= r+2, column = j+3, padx = (10,10)),
-#                     tk.Label(mf, text = "").grid(row= r+2, column = j+4, padx = (10,10)),
-# ]]
         check=ttk.Checkbutton(mf, variable=emo_scores[emotions[i]]).grid(row= r+2, column = j+2, padx = (10,10))
 
         un=tk.Button(bf, bg = 'darkgreen', fg = 'red',  text ="INCOMPRENSIBILE", command = incomprensibile )
@@ -292,8 +286,8 @@ def init_window():
             ttk.Separator(mf,orient='vertical').grid(row = r+1, column = j+4, rowspan = 2, sticky = 'ns', padx = (10,10))
     
         
-    #formatta_testo(df.loc[pointer, 'text'])
-    formatta_testo(df.loc[pointer,'text'])
+    testo=df.loc[pointer,'text']+' - PROGRAMMA: ' + df.loc[pointer,'Program Name']
+    formatta_testo(testo)
     
     
         
