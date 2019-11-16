@@ -138,8 +138,8 @@ def nextTweet():
     t_area.destroy()
     t_area = tk.Frame(tf)
     t_area.pack()
-
-    formatta_testo(df.loc[pointer, 'text'])   
+    testo=df.loc[pointer,'text']+' - PROGRAMMA: ' + df.loc[pointer,'Program Name']
+    formatta_testo(testo)   
 
 
 
